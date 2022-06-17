@@ -6,7 +6,44 @@
 
     <groupId>xyz.jiang</groupId>
     <artifactId>stdcloud</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-RELEASE</version>
+    <modules>
+        <module>springcloud_01_eureka_server</module>
+        <module>springcloud_02_eureka_client</module>
+        <module>springcloud_04_users</module>
+        <module>springcloud_05_orders</module>
+    </modules>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
+
+
+    <properties>
+        <spring.cloud.dependencies.version>Hoxton.SR6</spring.cloud.dependencies.version>
+        <spring.cloud.eurake.version>2.2.10.RELEASE</spring.cloud.eurake.version>
+    </properties>
+
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${spring.cloud.eurake.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
