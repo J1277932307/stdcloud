@@ -1,6 +1,9 @@
 package xyz.jiang.controller;
 
 
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -17,7 +20,7 @@ public class UserController {
 
     @GetMapping("/user")
     public String invokeDemo(){
-        String forObject = restTemplate.getForObject("http://"+getRandomHost()+"order", String.class);
+        String forObject = restTemplate.getForObject("http://ORDERS/order", String.class);
         System.out.println("调用订单服务成功："+forObject);
         return forObject;
     }
