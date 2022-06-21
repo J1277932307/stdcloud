@@ -15,6 +15,7 @@
         <module>springcloud_05_orders</module>
         <module>springcloud_06_category</module>
         <module>springcloud_07_product</module>
+        <module>springcloud_common</module>
     </modules>
 
     <parent>
@@ -27,6 +28,8 @@
     <properties>
         <spring.cloud.dependencies.version>Hoxton.SR6</spring.cloud.dependencies.version>
         <spring.cloud.eurake.version>2.2.10.RELEASE</spring.cloud.eurake.version>
+        <spring.cloud.feign.version>3.0.0</spring.cloud.feign.version>
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
 
@@ -44,6 +47,25 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
                 <version>${spring.cloud.eurake.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring.cloud.feign.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>xyz.jiang</groupId>
+                <artifactId>springcloud_common</artifactId>
+                <version>1.0-RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
