@@ -7,16 +7,13 @@ import xyz.jiang.pojo.entity.product.Product;
 @FeignClient("PRODUCT")
 public interface ProductClient {
 
-    @GetMapping("product")
+    @GetMapping("/product/print")
     String product();
 
-    @GetMapping("/test")
+    @GetMapping("/product/test")
     String test(@RequestParam("name") String name, @RequestParam("age") Integer age);
 
-    @PostMapping("/test2")
-    String test2(@RequestBody Product product);
-
-    @GetMapping("/product1/{id}")
+    @GetMapping("/product/as/{id}")
     Product getProduct(@PathVariable("id") Integer id);
 
 

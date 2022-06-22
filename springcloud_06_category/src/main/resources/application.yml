@@ -16,9 +16,12 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
+      PRODUCT:
+        loggerLevel: FULL
 
 logging:
   level:
     xyz:
       jiang:
         client: debug
+

@@ -14,19 +14,19 @@ public class ProductController {
     @Value("${server.port}")
     private String port;
 
-    @GetMapping("product")
+    @GetMapping("/product/print")
     public String product(){
         System.out.println("调用product接口:"+port);
         return "product!!!端口："+port;
     }
 
-    @GetMapping("/test")
+    @GetMapping("/product/test")
     public String test(@RequestParam("name") String name,@RequestParam("age") Integer age){
         System.out.println("name:"+name+",age:"+age);
         return "product!!!端口："+port;
     }
 
-    @GetMapping("/product1/{id}")
+    @GetMapping("/product/as/{id}")
     public Product getProduct(@PathVariable("id") Integer id){
         log.debug("id:{}",id);
         return new Product(id, "内衣", 23.8, LocalDate.now());

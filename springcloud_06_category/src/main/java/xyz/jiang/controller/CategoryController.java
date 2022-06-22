@@ -17,19 +17,19 @@ public class CategoryController {
     @Resource
     private ProductClient productClient;
 
-    @GetMapping("/category")
+    @GetMapping("/category/print")
     public String category(){
         System.out.println("category!!!调用product!");
         return productClient.product();
     }
 
-    @GetMapping("/test")
+    @GetMapping("/category/test")
     public String test(@RequestParam("name") String name,@RequestParam("age") Integer age){
         System.out.println(name+":"+age);
         return productClient.test(name, age);
     }
 
-    @GetMapping("/getProduct/{id}")
+    @GetMapping("/category/getProduct/{id}")
     public Product getProduct(@PathVariable("id") Integer id){
         log.debug("id:{}",id);
         return productClient.getProduct(id);

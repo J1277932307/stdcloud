@@ -1,0 +1,23 @@
+server:
+  port: 7979
+
+spring:
+  application:
+    name: GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: category_route
+          uri: http://localhost:8787
+          predicates:
+            - Path=/category/**
+        - id: product_route
+            uri: http://localhost:8788
+            predicates:
+              - Path=/product/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
