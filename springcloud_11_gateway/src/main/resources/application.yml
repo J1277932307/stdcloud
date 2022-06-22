@@ -8,13 +8,13 @@ spring:
     gateway:
       routes:
         - id: category_route
-          uri: http://localhost:8787
+          uri: lb://CATEGORY
           predicates:
             - Path=/category/**
         - id: product_route
-            uri: http://localhost:8788
-            predicates:
-              - Path=/product/**
+          uri: lb://PRODUCT
+          predicates:
+            - Path=/product/**
 
 eureka:
   client:

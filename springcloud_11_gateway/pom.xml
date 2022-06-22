@@ -24,7 +24,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-
         <dependency>
             <groupId>xyz.jiang</groupId>
             <artifactId>springcloud_common</artifactId>

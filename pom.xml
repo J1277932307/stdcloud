@@ -31,7 +31,7 @@
         <spring.cloud.eurake.version>2.2.10.RELEASE</spring.cloud.eurake.version>
         <spring.cloud.feign.version>3.0.0</spring.cloud.feign.version>
         <lombok.version>1.18.24</lombok.version>
-        <spring.cloud.gateway.version>3.0.0</spring.cloud.gateway.version>
+        <spring.cloud.gateway.version>2.1.5.RELEASE</spring.cloud.gateway.version>
     </properties>
 
 
