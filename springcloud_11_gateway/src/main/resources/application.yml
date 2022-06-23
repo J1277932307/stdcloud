@@ -11,10 +11,13 @@ spring:
           uri: lb://CATEGORY
           predicates:
             - Path=/category/**
+
         - id: product_route
           uri: lb://PRODUCT
           predicates:
             - Path=/product/**
+          filters:
+            - AddResponseHeader=X-Response-Red,blue
 
 eureka:
   client:

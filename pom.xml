@@ -17,6 +17,7 @@
         <module>springcloud_07_product</module>
         <module>springcloud_common</module>
         <module>springcloud_11_gateway</module>
+        <module>springcloud_12_configserver</module>
     </modules>
 
     <parent>
@@ -32,8 +33,9 @@
         <spring.cloud.feign.version>3.0.0</spring.cloud.feign.version>
         <lombok.version>1.18.24</lombok.version>
         <spring.cloud.gateway.version>2.1.5.RELEASE</spring.cloud.gateway.version>
+        <spring.cloud.config.server.version>2.2.3.RELEASE</spring.cloud.config.server.version>
+        <spring.cloud.config.client.version>2.2.3.RELEASE</spring.cloud.config.client.version>
     </properties>
-
 
 
     <dependencyManagement>
@@ -74,6 +76,18 @@
                 <artifactId>spring-cloud-starter-gateway</artifactId>
                 <version>${spring.cloud.gateway.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+                <version>${spring.cloud.config.server.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-config -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+                <version>${spring.cloud.config.client.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

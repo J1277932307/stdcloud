@@ -1,0 +1,19 @@
+server:
+  port: 8848
+spring:
+  application:
+    name: CONFIGSERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/jiang_kan/configs.git
+          default-label: master
+          username: jiang_kan
+          password: AUQf19940909...
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
